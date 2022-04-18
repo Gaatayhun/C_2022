@@ -1,16 +1,22 @@
 #include <iostream>
-#include <string>
+#include <cstring>
 
 using namespace std;
 
 int main()
 {
-int s;
-string b[10]={
-"ноль", "один","два","три","четыре","пять","шесть","семь","восемь","девять"
-};
-cout«"input num"«"\n";
-cin»s;
-cout«b[s];
-return 0;
+    int a, i=0, *ip;
+    char x[80];
+    cout << "Ввод символов" << "\n";
+    cin >> x;
+    cout<<"Результат - ";
+    a = strlen(x);
+    while (1){
+        ip=(int *) &x[i];
+        (*ip)++;
+        cout<<x[i];
+        if(a==i) break;
+        i++;
+    }
+    return 0;
 }
