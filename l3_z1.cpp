@@ -17,10 +17,7 @@ int main()
             ofstream file("output");
             file << res << '\n';
             file.close();
-            ifstream fole("output");
-            fole >> out;
-            cout << out << '\n';
-            file.close();
+            
         }
     }
     else {
