@@ -1,10 +1,10 @@
 #include <iostream>
-
+#include <fstream>
 using namespace std;
 
 int main()
 {
-    int a, b, res;
+    int a, b, res, out;
     cout << "enter the chislo A: ";
     cin >> a;
     cout << "enter the chislo B: ";
@@ -13,7 +13,14 @@ int main()
         while (a <= b) {
             res = a * 3;
             a= a + 1;
-            cout << res << ',';
+            
+            ofstream file("output");
+            file << res << '\n';
+            file.close();
+            ifstream fole("output");
+            fole >> out;
+            cout << out << '\n';
+            file.close();
         }
     }
     else {
