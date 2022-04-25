@@ -24,6 +24,7 @@ int main()
     else {
         cout << "error";
     }
+    file << "end" ;
     file.close();
     
     return 0;
