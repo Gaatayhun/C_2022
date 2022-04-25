@@ -1,23 +1,22 @@
 #include <iostream>
-#include <cmath>
-
-using namespace std ;
-float SquaredSum(float a, float b,float res)
+#include <fstream>
+using namespace std;
+float sums(float a, float b);
+int a,b;
+int main()
 {
-    double c=2;
-    res = pow(a+b,c);
-    return res;
-}
-
-
-int main ()
-{
-float a,b,res;
-cout << "vvedite chislo a: ";
-cin >> a;
-cout << "vvedite chislo b: ";
-cin >> b;
-cout << SquaredSum(a,b,res);
-return 0;
+    int a,b;
+    cout << "vvedite a: ";
+    cin >> a;
+    cout << "vvedite b: ";
+    cin >> b;
+    float value;
+    value = sums(a,b);
+    cout << value << "\n";
     
+    return 0;
+}
+float sums(float a, float b){
+    cout<<"sqsm("<<a<<", "<<b<<")=";
+    return (a+b)*(a+b);
 }
